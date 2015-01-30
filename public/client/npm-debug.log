@@ -1,0 +1,21 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'cache', 'clean' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose node symlink /usr/bin/node
+5 error Error: EACCES, unlink '/home/vagrant/.npm/CSSselect/0.4.1'
+5 error  { [Error: EACCES, unlink '/home/vagrant/.npm/CSSselect/0.4.1']
+5 error   errno: 3,
+5 error   code: 'EACCES',
+5 error   path: '/home/vagrant/.npm/CSSselect/0.4.1' }
+6 error Please try running this command again as root/Administrator.
+7 error System Linux 3.13.0-44-generic
+8 error command "/usr/bin/node" "/usr/bin/npm" "cache" "clean"
+9 error cwd /home/vagrant/data/angularjs-rails-api-devise-bootstrap/public/client
+10 error node -v v0.10.36
+11 error npm -v 1.4.28
+12 error path /home/vagrant/.npm/CSSselect/0.4.1
+13 error code EACCES
+14 error errno 3
+15 error stack Error: EACCES, unlink '/home/vagrant/.npm/CSSselect/0.4.1'
+16 verbose exit [ 3, true ]
