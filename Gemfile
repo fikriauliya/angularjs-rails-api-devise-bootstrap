@@ -26,3 +26,6 @@ gem 'sqlite3'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem 'devise_token_auth'
+gem 'omniauth'
