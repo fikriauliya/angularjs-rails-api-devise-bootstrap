@@ -8,12 +8,21 @@
  *
  * Main module of the application.
  */
-angular
-  .module('clientApp', [
+var myApp = angular.module('clientApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ng-token-auth'
+    'ng-token-auth',
+    'ui.router'
   ]);
+
+myApp.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
+    $stateProvider
+      .state("home", {
+        url: "/",
+        templateUrl: "views/main.html"
+      });
+  });
