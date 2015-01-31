@@ -14,5 +14,6 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ng-token-auth'
   ]);
