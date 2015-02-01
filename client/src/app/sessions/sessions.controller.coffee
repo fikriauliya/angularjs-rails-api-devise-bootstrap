@@ -11,3 +11,11 @@ angular.module "client"
         $scope.errors = resp.errors
         return
       return
+    $scope.logout = () ->
+      $auth.signOut()
+        .then (resp) ->
+          console.log("Logged out")
+          return
+        .catch (resp) -> 
+          console.log(resp)
+          return
