@@ -29,6 +29,10 @@ angular.module "client", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
         url: "passwords/new",
         templateUrl: "app/passwords/new.html",
         controller: "PasswordsCtrl"
+      .state "main.passwords.update",
+        url: "passwords/update",
+        templateUrl: "app/passwords/update.html",
+        controller: "PasswordsCtrl"
 
     $urlRouterProvider.otherwise '/'
 
