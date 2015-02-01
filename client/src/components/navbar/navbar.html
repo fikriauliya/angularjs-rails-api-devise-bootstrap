@@ -12,10 +12,10 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="main.sessions.new">Log in</a></li>
-        <li><a ui-sref="main.registrations.new">Sign up</a></li>
-        <li><a ui-sref="main.passwords.update">Profile</a></li>
-        <li><a ng-click="logout()" href="" ng-controller="SessionsCtrl">Sign out</a></li>
+        <li ng-if="!user.signedIn"><a ui-sref="main.sessions.new">Log in</a></li>
+        <li ng-if="!user.signedIn"><a ui-sref="main.registrations.new">Sign up</a></li>
+        <li ng-if="user.signedIn"><a ui-sref="main.passwords.update">Profile</a></li>
+        <li ng-if="user.signedIn"><a ng-click="signOut()" href="">Sign out</a></li>
       </ul>
     </div>
   </div>
