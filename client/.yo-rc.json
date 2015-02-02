@@ -46,10 +46,10 @@
         "module": null
       },
       "bootstrapComponents": {
-        "name": "angular-bootstrap",
-        "version": "0.12.x",
-        "key": "ui-bootstrap",
-        "module": "ui.bootstrap"
+        "name": null,
+        "version": null,
+        "key": "official",
+        "module": null
       },
       "cssPreprocessor": {
         "key": "ruby-sass",
@@ -65,10 +65,10 @@
         "version": "~2.2.0"
       },
       "htmlPreprocessor": {
-        "key": "haml",
-        "extension": "haml",
-        "module": "hamljs",
-        "version": "~0.6.2"
+        "key": "jade",
+        "extension": "jade",
+        "module": "jade",
+        "version": "~1.8.1"
       },
       "foundationComponents": {
         "name": null,

@@ -50,12 +50,6 @@ angular.module "client"
         'logo': 'bootstrap.png'
       },
       {
-        'title': 'Angular UI Bootstrap',
-        'url': 'http://angular-ui.github.io/bootstrap/',
-        'description': 'Bootstrap components written in pure AngularJS by the AngularUI Team.',
-        'logo': 'ui-bootstrap.png'
-      },
-      {
         'title': 'Sass (Ruby)',
         'url': 'http://sass-lang.com/',
         'description': 'Original Syntactically Awesome StyleSheets implemented in Ruby',
@@ -68,11 +62,11 @@ angular.module "client"
         'logo': 'coffeescript.png'
       },
       {
-        'key': 'haml',
-        'title': 'HAML',
-        'url': 'http://haml.info/',
-        'description': 'Beautiful, DRY, well-indented, clear markup: templating haiku.',
-        'logo': 'haml.png'
+        'key': 'jade',
+        'title': 'Jade',
+        'url': 'http://jade-lang.com/',
+        'description': 'Jade is a high performance template engine heavily influenced by Haml and implemented with JavaScript for node.',
+        'logo': 'jade.png'
       }
     ]
     angular.forEach $scope.awesomeThings, (awesomeThing) ->

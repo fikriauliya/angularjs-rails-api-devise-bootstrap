@@ -12,5 +12,5 @@ gulp.task('watch', ['markups', 'inject'], function () {
     paths.src + '/{app,components}/**/*.coffee',
     'bower.json'
   ], ['inject']);
-  gulp.watch(paths.src + '/{app,components}/**/*.haml', ['markups']);
+  gulp.watch(paths.src + '/{app,components}/**/*.jade', ['markups']);
 });

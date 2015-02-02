@@ -7,7 +7,6 @@ var paths = gulp.paths;
 var $ = require('gulp-load-plugins')();
 
 var wiredep = require('wiredep').stream;
-
 gulp.task('inject', ['styles', 'scripts'], function () {
 
   var injectStyles = gulp.src([
@@ -28,7 +27,7 @@ gulp.task('inject', ['styles', 'scripts'], function () {
 
   var wiredepOptions = {
     directory: 'bower_components',
-    exclude: [/bootstrap-sass-official/, /bootstrap\.css/, /bootstrap\.css/, /foundation\.css/]
+    exclude: [/bootstrap\.css/, /bootstrap\.css/, /foundation\.css/]
   };
 
   return gulp.src(paths.src + '/*.html')
