@@ -34,5 +34,11 @@ angular.module "client", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
         templateUrl: "app/passwords/update.html",
         controller: "PasswordsCtrl"
 
+      .state "main.sign_up_or_log_in",
+        url: "sign_up_or_log_in",
+        templateUrl: "app/users/sign_up_or_log_in.html",
+        controller: "UsersCtrl"
+
+
     $urlRouterProvider.otherwise '/'
 
