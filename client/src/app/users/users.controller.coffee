@@ -1,25 +1,21 @@
 angular.module "client"
-  .controller "UsersCtrl", ($scope, $auth) ->
+  .controller "UsersCtrl", ($scope, $auth, $state) ->
     $scope.submitLogin = (loginForm) ->
       $auth.submitLogin(loginForm).then((resp) ->
-        $scope.info = "Successfully logged in"
-        $scope.errors = []
-        $scope.loginForm = {}
+        toastr.success("Welcome back!")
+        $state.go("main")
         return
       ).catch (resp) ->
-        $scope.info = ""
         $scope.errors = resp.errors
         return
       return
 
     $scope.submitRegistration = (registrationForm) ->
       $auth.submitRegistration(registrationForm).then((resp) ->
-        $scope.info = "Your account has been created"
-        $scope.errors = []
-        $scope.registrationForm = {}
+        toastr.success("Your account has been created")
+        $state.go("main")
         return
       ).catch (resp) ->
-        $scope.info = ""
         $scope.errors = resp.data.errors
         return
       return
