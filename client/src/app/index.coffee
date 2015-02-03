@@ -6,36 +6,16 @@ angular.module "client", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
         templateUrl: "app/main/main.html",
         controller: "MainCtrl"
 
-      .state "main.registrations",
-        abstract: true,
-        template: "<div ui-view></div>"
-      .state "main.registrations.new",
-        url: "registrations/new",
-        templateUrl: "app/registrations/new.html",
-        controller: "RegistrationsCtrl"
-
-      .state "main.sessions",
-        abstract: true,
-        template: "<div ui-view></div>"
-      .state "main.sessions.new",
-        url: "sessions/new",
-        templateUrl: "app/sessions/new.html",
-        controller: "SessionsCtrl"
-
-      .state "main.passwords",
-        abstract: true,
-        template: "<div ui-view></div>"
-      .state "main.passwords.new",
-        url: "passwords/new",
-        templateUrl: "app/passwords/new.html",
+      .state "main.password_reset",
+        url: "users/password_reset",
+        templateUrl: "app/users/password_reset.html",
         controller: "PasswordsCtrl"
-      .state "main.passwords.update",
-        url: "passwords/update",
-        templateUrl: "app/passwords/update.html",
-        controller: "PasswordsCtrl"
-
+      .state "main.password_update",
+        url: "users/password_update",
+        templateUrl: "app/users/password_update.html",
+        controller: "UsersCtrl"
       .state "main.sign_up_or_log_in",
-        url: "sign_up_or_log_in",
+        url: "users/sign_up_or_log_in",
         templateUrl: "app/users/sign_up_or_log_in.html",
         controller: "UsersCtrl"
 

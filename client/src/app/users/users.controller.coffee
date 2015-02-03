@@ -23,12 +23,10 @@ angular.module "client"
     $scope.requestPasswordReset = (passwordResetForm) ->
       $auth.requestPasswordReset(passwordResetForm)
         .then (resp) ->
-          $scope.info = "Your password reset link has been sent to your email"
-          $scope.errors = []
-          $scope.registrationForm = {}
+          toastr.success("Your password reset link has been sent to your email")
+          $state.go("main")
           return
         .catch (resp) ->
-          $scope.info = ""
           $scope.errors = resp.data.errors
           return
         return
@@ -36,10 +34,9 @@ angular.module "client"
     $scope.updatePassword = (changePasswordForm) ->
       $auth.updatePassword($scope.changePasswordForm)
         .then (resp) ->
-          $scope.info = "Password updated"
-          $scope.errors = []
+          toastr.success("Password updated")
+          $state.go("main")
           return
         .catch (resp) ->
-          $scope.info = ""
           $scope.errors = resp.data.errors
           return
