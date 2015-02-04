@@ -1,5 +1,8 @@
 angular.module "client", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ng-token-auth']
-  .config ($stateProvider, $urlRouterProvider) ->
+  .config ($stateProvider, $urlRouterProvider, $authProvider) ->
+    $authProvider.configure
+      apiUrl: ''
+
     $stateProvider
       .state "main",
         url: "/",
