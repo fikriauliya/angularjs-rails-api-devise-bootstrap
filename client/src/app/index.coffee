@@ -2,6 +2,8 @@ angular.module "client", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
   .config ($stateProvider, $urlRouterProvider, $authProvider) ->
     $authProvider.configure
       apiUrl: ''
+      authProviderPaths:
+        facebook: '/auth/facebook'
 
     $stateProvider
       .state "main",

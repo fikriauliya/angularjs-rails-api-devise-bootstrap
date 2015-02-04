@@ -49,7 +49,7 @@ function proxyMiddleware(req, res, next) {
    * may be more reliable but can't be generic.
    */
   // if (/\.(html|css|js|png|jpg|jpeg|gif|ico|xml|rss|txt|eot|svg|ttf|woff|cur)(\?((r|v|rel|rev)=[\-\.\w]*)?)?$/.test(req.url)) {
-  if (/\/api\/.+/.test(req.url) || /\/auth\/.+/.test(req.url)) {
+  if (/\/api\/.+/.test(req.url) || /\/auth\/.+/.test(req.url) || /\/omniauth\/.+/.test(req.url)) {
     proxy.web(req, res);
   } else {
     next();
