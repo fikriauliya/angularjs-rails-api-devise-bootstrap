@@ -12,7 +12,8 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-if="!user.signedIn"><a ui-sref="main.sign_up_or_log_in">Register/Log in</a></li>
+        <li ng-if="!user.signedIn"><a ui-sref="main.register">Register</a></li>
+        <li ng-if="!user.signedIn"><a ui-sref="main.log_in">Log in</a></li>
         <li ng-if="user.signedIn"><a ui-sref="main.password_update">Profile</a></li>
         <li ng-if="user.signedIn"><a ng-click="signOut()" href="">Log out</a></li>
       </ul>
