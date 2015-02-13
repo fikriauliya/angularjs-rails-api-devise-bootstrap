@@ -2,8 +2,6 @@ angular.module "client"
   .controller "UsersCtrl", ($scope, $auth, $state) ->
     $scope.submitLogin = (loginForm) ->
       $auth.submitLogin(loginForm).then((resp) ->
-        toastr.success("Welcome back!")
-        $state.go("main")
         return
       ).catch (resp) ->
         $scope.errors = resp.errors
@@ -40,3 +38,9 @@ angular.module "client"
         .catch (resp) ->
           $scope.errors = resp.data.errors
           return
+
+    $scope.$on('auth:login-success', (ev, user) ->
+      toastr.success("Welcome back!")
+      $state.go("main")
+      return
+    )
